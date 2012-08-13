@@ -9,7 +9,7 @@
 // Don't load directly
 if ( !defined('ABSPATH') ) { die('-1'); }
 ?>
-<span class="back"><a href="<?php echo tribe_get_events_link(); ?>"><?php _e('&laquo; Back to Schedule', 'tribe-events-calendar'); ?></a></span>				
+<div class="back"><a href="<?php echo tribe_get_events_link(); ?>"><?php _e('&laquo; Back to Schedule', 'tribe-events-calendar'); ?></a></div>				
 <div class="entry">
 <?php
 	$gmt_offset = (get_option('gmt_offset') >= '0' ) ? ' +' . get_option('gmt_offset') : " " . get_option('gmt_offset');
@@ -23,6 +23,5 @@ if ( !defined('ABSPATH') ) { die('-1'); }
 	<?php if (function_exists('tribe_get_ticket_form') && tribe_get_ticket_form()) { tribe_get_ticket_form(); } ?>		
 </div>
 <div class="navlink previous"><?php tribe_previous_event_link();?></div>
-
 <div class="navlink next"><?php tribe_next_event_link();?></div>
 <div style="clear:both"></div>

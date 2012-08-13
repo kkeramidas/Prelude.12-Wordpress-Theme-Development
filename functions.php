@@ -413,13 +413,6 @@ function events_page_side_calendar () {
 	$get_posts = tribe_get_events(
         array(
             'eventDisplay'=>'all',
-            'tax_query'=> array(
-                array(
-                    'taxonomy' => 'tribe_events_cat',
-                    'field' => 'slug'
-// Might need this                    'terms' => 'current-season'
-                )
-            )
     )
 	);
 ?>
@@ -428,9 +421,9 @@ function events_page_side_calendar () {
 	<div class="events-sidecal-event">
 	<?php
 
-	$month = date('F');
-	$showmonth = false;
-	$monthcount = 0;
+	$day = date('j');
+	$showdate = false;
+	$datecount = 0;
 
 	foreach($get_posts as $eventpost) { 
 		setup_postdata($eventpost);
@@ -442,36 +435,36 @@ function events_page_side_calendar () {
 			$eventcal = 'manifestos-2012';
 		}
 		elseif (has_term('imitation-participation','tribe_events_cat',$eventpost))  {
-			$eventcal = 'imitation-of-participation';
+			$eventcal = 'imitation-participation';
 		}
 		elseif (has_term('return-of-singspiel','tribe_events_cat',$eventpost)) {
 			$eventcal = 'return-of-singspiel';
 		}//endif
 		
-		$eventmonth = tribe_get_start_date( $eventpost->ID, false, 'F' );
+		$eventday = tribe_get_start_date( $eventpost->ID, false, 'j' );
 		
-		if ($eventmonth != $month){
-			$month = $eventmonth;
-			$showmonth = true;
+		if ($eventday != $day){
+			$day = $eventday;
+			$showday = true;
 
 		} //end if
 	
-		if ($monthcount == 0 || $showmonth == true){
-			$monthheader = '<h2 class="calendar-month">';
-			$monthheader .= $month;
-			$monthheader .= '.12</h2>';
-			echo $monthheader;				
+		if ($datecount == 0 || $showday == true){
+			$dayheader = '<h2 class="calendar-day">OCT. ';
+			$dayheader .= $day;
+			$dayheader .= '</h2>';
+			echo $dayheader;				
 		} // endif
 		
-		$showmonth = false;
-		$monthcount = 1;
-		$event_id = $eventpost->ID;
+		$showday = false;
+		$datecount = 1;
 		?>
 		
-        <div class="event-short-title"><div class="<?php echo $eventcal;?>"><a href="<?php echo get_permalink($eventpost->ID); ?>" id="post-<?php echo $eventpost->ID ?>"><?php echo get_post_meta($eventpost->ID, $key, true); ?></a></div>
+        <div class="event-short-title"><div class="<?php echo $eventcal;?>"><a href="<?php echo get_permalink($eventpost->ID); ?>" id="post-<?php echo $eventpost->ID ?>"><?php the_title(); ?></a></div></div>
 <?php } //endforeach ?>
 
     </div>
+	</div>
 	<?php wp_reset_query();
 }
 
