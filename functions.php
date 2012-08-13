@@ -79,30 +79,31 @@ function category_header_image(){
 	$PRELUDEimagedir = get_stylesheet_directory_uri();
 	$PRELUDEimagedir .= '/library/images/';
     if (is_page('index')){
-	echo 'COMING SOON';
 	}
-	elseif (in_category('about')) {
-        $headerimage = 'PRELUDEAboutHeader.png';
-    }
-	elseif (in_category('artists')) {
-        $headerimage = 'PRELUDEArtistsHeader.png';
-    }
-    elseif (is_page('discussions' )) {
-        $headerimage = 'PRELUDEDiscussionsHeader.png';
-    }
-    elseif (is_page('schedule' )) {
-        $headerimage = 'PRELUDEScheduleHeader.png';
-    }
-    elseif (is_page('directions' )) {
-        $headerimage = 'PRELUDEDirectionsHeader.png';
-    }
-    else {
-        $headerimage = 'PRELUDEBlogHeader.png';
-    }//endif
+	else {
+		if (in_category('about')) {
+	        $headerimage = 'PRELUDEAboutHeader.png';
+	    }
+		elseif (in_category('artists')) {
+	        $headerimage = 'PRELUDEArtistsHeader.png';
+	    }
+	    elseif (is_page('discussions' )) {
+	        $headerimage = 'PRELUDEDiscussionsHeader.png';
+	    }
+	    elseif (is_page('schedule' )) {
+	        $headerimage = 'PRELUDEScheduleHeader.png';
+	    }
+	    elseif (is_page('directions' )) {
+	        $headerimage = 'PRELUDEDirectionsHeader.png';
+	    }
+	    else {
+	        $headerimage = 'PRELUDEBlogHeader.png';
+	    }//end second level if
 ?>
-    <div id="headerimage" style="background: url('<?php echo $PRELUDEimagedir.$headerimage ?>') no-repeat">
-    </div>
+	    <div id="headerimage" style="background: url('<?php echo $PRELUDEimagedir.$headerimage ?>') no-repeat">
+	    </div>
     <?php 
+	}
 }
 add_action('thematic_abovecontent','category_header_image',9);
 

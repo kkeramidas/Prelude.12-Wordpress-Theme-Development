@@ -680,7 +680,7 @@ li.content-column {
     padding:0;
 }
 #primary {
-	width:185px;
+	width:180px;
     padding:0;
     margin:0 0 20px 65px;
     float:right;
@@ -820,7 +820,7 @@ ul.xoxo {
 }
 
 h3.widgettitle{
-	font-size:19px;
+	font-size:17px;
 	font-weight:bold;
 	font-style:normal;
 	padding-bottom: 8px;
@@ -837,14 +837,37 @@ li.widget_search{
 input#s{
 	margin: 0;
 	border: black 1px solid;
-	width: 180px;
+	width: 174px;
 	height: 24px;
+	padding-left:2px;
+}
+
+#primary #searchform,
+#primary p {
+	margin-bottom:10px;
+}
+
+#widget-social{
+	background-color: #DDD;
+	height:48px;
+	width:180px;
+	margin-bottom:10px;
+}
+
+#widget-social img.social-facebook{
+	float:left;
+	padding: 8px 10px 0 13px;
+}
+
+#widget-social img.social-twitter{
+	float:left;
+	padding-top: 10px;
 }
 
 /* =Side Calendar */
 
 #calendar{
-	width:185px;
+	width:180px;
     padding:0;
     margin:0 0 20px 65px;
 	font-family: Helvetica, Arial, sans-serif;
