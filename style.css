@@ -1,0 +1,165 @@
+/*   
+Theme Name: Prelude.12
+Description: Theme for Prelude.12 festival at MESTC
+Author: Kimon Keramidas
+Author URI: http://kimonkeramidas.net
+Template: thematic
+Version: 1.0
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+.
+The Prelude.12 Theme is copyright Kimon Keramidas
+This work, like WordPress, is released under GNU General Public License, version 2 (GPL).
+.
+
+*/
+
+/* Reset browser defaults */
+@import url('../thematic/library/styles/reset.css');
+
+/* Apply basic typography styles */
+@import url('../thematic/library/styles/typography.css');
+
+/* Apply a basic layout */
+@import url('library/layouts/2c-r-fixed.css');
+
+/* Apply basic image styles */
+@import url('library/styles/images.css');
+
+/* Apply default theme styles and colors */
+/* It's better to actually copy over default.css into this file (or link to a copy in your child theme) if you're going to do anything outrageous */
+@import url('library/styles/default.css');
+
+/* Prepare theme for plugins */
+@import url('../thematic/library/styles/plugins.css');
+
+#access { 
+	background-image:url('library/images/PRELUDE12Free.png');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-position: 678px 0px;
+	height:28px;
+}
+
+/* =Top Menu */
+#menu-top-menu li.menu-item {
+  padding-right:18px;
+}
+
+
+li#menu-item-37 a{
+    display: block;
+    background-image:url('library/images/About.gif');
+    background-repeat: no-repeat;
+    height:28px;
+    width: 69px;
+    text-indent: -9000px;
+}
+
+li#menu-item-37 a:hover,
+li#menu-item-37.current_page_item a{
+    display: block;
+    background-image:url('library/images/AboutHOVER.gif');
+    background-repeat: no-repeat;
+    height:28px;
+    width: 69px;
+    text-indent: -9000px;
+}
+
+li#menu-item-36 a{
+    display: block;
+    background-image:url('library/images/Artists.gif');
+    background-repeat: no-repeat;
+    height:28px;
+    width: 75px;
+    text-indent: -9000px;
+}
+
+li#menu-item-36 a:hover,
+li#menu-item-36.current_page_item a{
+    display: block;
+    background-image:url('library/images/ArtistsHOVER.gif');
+    background-repeat: no-repeat;
+    height:28px;
+    width: 75px;
+    text-indent: -9000px;
+}
+
+li#menu-item-34 a{
+    display: block;
+    background-image:url('library/images/Discussions.gif');
+    background-repeat: no-repeat;
+    height:28px;
+    width: 122px;
+    text-indent: -9000px;
+}
+
+li#menu-item-34 a:hover,
+li#menu-item-34.current_page_item a{
+    display: block;
+    background-image:url('library/images/DiscussionsHOVER.gif');
+    background-repeat: no-repeat;
+    height:28px;
+    width: 122px;
+    text-indent: -9000px;
+}
+
+li#menu-item-35 a{
+    display: block;
+    background-image:url('library/images/Schedule.gif');
+    background-repeat: no-repeat;
+    height:28px;
+    width: 95px;
+    text-indent: -9000px;
+}
+
+li#menu-item-35 a:hover,
+li#menu-item-35.current_page_item a{
+    display: block;
+    background-image:url('library/images/ScheduleHOVER.gif');
+    background-repeat: no-repeat;
+    height:28px;
+    width: 95px;
+    text-indent: -9000px;
+}
+
+li#menu-item-38 a{
+    display: block;
+    background-image:url('library/images/Blog.gif');
+    background-repeat: no-repeat;
+    height:28px;
+    width: 53px;
+    text-indent: -9000px;
+}
+
+li#menu-item-38 a:hover,
+li#menu-item-38.current_page_item a{
+    display: block;
+    background-image:url('library/images/BlogHOVER.gif');
+    background-repeat: no-repeat;
+    height:28px;
+    width: 53px;
+    text-indent: -9000px;
+}
+
+li#menu-item-33 a{
+    display: block;
+    background-image:url('library/images/Directions.gif');
+    background-repeat: no-repeat;
+    height:28px;
+    width: 107px;
+    text-indent: -9000px;
+}
+
+li#menu-item-33 a:hover,
+li#menu-item-33.current_page_item a{
+    display: block;
+    background-image:url('library/images/DirectionsHOVER.gif');
+    background-repeat: no-repeat;
+    height:28px;
+    width: 107px;
+    text-indent: -9000px;
+}
+
+

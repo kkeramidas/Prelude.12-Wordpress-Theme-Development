@@ -1,0 +1,92 @@
+/*
+LAYOUT: One-Column (Right) Fixed
+DESCRIPTION: Two-column 950px fixed layout with one sidebar right of content
+*/
+
+body {
+    min-width:1000px;
+}
+#header {
+    position:relative;
+}
+#branding {
+    width:1000px;
+    margin:0 auto;
+}
+#access {
+	width:1000px;
+    position:relative;
+    overflow:hidden;
+    margin:0 auto;
+}
+
+.menu {
+    width:675px;
+    float:left;
+}
+
+#main {
+    width:1000px;
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+}
+#container {
+    width:750px;
+    float:left;
+}
+#content {
+    margin:0;
+    width:750px;
+    overflow:hidden;
+}
+.main-aside {
+    width:240px;
+    float:right;
+    position:relative;
+}
+#secondary {
+    clear:right;
+}
+#footer {    
+    clear:both;
+}
+#subsidiary {
+    width:1000px;
+    margin:0 auto;
+    overflow:hidden;
+}
+#subsidiary .aside {
+    width:250px;
+    float:left;
+    margin:0;
+}
+#subsidiary #third {
+    margin:0;
+}
+#siteinfo {
+    clear:both;
+    width:1000px;
+    margin:0 auto;
+}
+
+/* =Page Templates
+-------------------------------------------------------------- */
+
+/*
+    Full Width Template
+*/
+
+.page-template-template-page-fullwidth-php #container {
+	margin:0;
+	width:1000px;
+}
+
+.page-template-template-page-fullwidth-php #content {
+	margin: 0;
+	width:1000px;
+}
+
+.page-template-template-page-fullwidth-php #comments {
+    width:540px;
+}
