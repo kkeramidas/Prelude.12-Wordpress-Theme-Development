@@ -1,7 +1,5 @@
 /* -------------------------------------------------------------- 
-   
-   Default styles for Images
-  
+	Adapted Style Sheet for PRELUDE.12
 -------------------------------------------------------------- */   
 .entry-content .wp-post-image {
 	border: 1px solid #ccc;
@@ -33,11 +31,8 @@ img.aligncenter {
 	clear: both;
 }
 .wp-caption {
-	text-align: left;
-	margin-bottom:5px;
+	margin-bottom:10px;
 	max-width: 96%;
-	padding: 0px 0px 0 5px;
-        line-height:13px;
 }
 .wp-caption img {
 	border: 1px solid #ccc;
@@ -46,8 +41,8 @@ img.aligncenter {
 }
 .wp-caption p.wp-caption-text {
 	margin: 0;
-	padding-top: 5px;
 }
+
 .gallery {
 	display: block;
 	clear: both;
@@ -84,9 +79,12 @@ img.aligncenter {
 }
 .wp-caption-text,
 .gallery-caption {
-    color: #82939B;
-    font-size:11px;
-    margin: 5px 0 0 0;
+    font-size:12px;
+    line-height:16px;
+}
+
+.wp-caption-text{
+	font-style:italic;
 }
 
 .wp-smiley { /* Prevent the smileys from breaking line-height */
@@ -95,3 +93,20 @@ img.aligncenter {
 }
 
 
+
+/*
+
+Adapt the following for use in your Child Themes when using
+different font-sizes and line-heights
+
+.entry-content img,
+.wp-caption {
+    margin-bottom:--px;
+}
+.wp-smiley {
+    max-height:--px;
+}
+
+All other styles can be overridden--or ignored!--in Child Theme stylesheets
+
+*/

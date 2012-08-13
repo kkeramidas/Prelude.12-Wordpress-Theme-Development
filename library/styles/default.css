@@ -811,7 +811,58 @@ ul, li {
 	height:192px;
 	width:750px;
 	padding-bottom:15px;
-} s
+}
+
+/* =CONTENT ADJUSTMENTS
+===========================================================*/
+.entry-content{
+	padding-top:5px;
+}
+
+.entry-content a{
+	color: #470F8C;
+	text-decoration:none;
+	font-weight:bold;
+	}
+	
+.entry-content a:hover{
+	color:#555555;
+}
+
+.entry h1,
+.entry-content h1{
+	padding:15px 0 10px;
+	font-size:20px;
+}
+
+.entry h2,
+.entry-content h2{
+	padding: 0;
+	margin-bottom:15px;
+	float:left;
+	clear:none;
+	width: 320px;
+	font-size:18px;
+	font-weight:bold;
+	font-style:italic;
+}
+
+#tribe-events-event-meta{
+	float:left;
+	clear:none;
+	width: 320px;
+	padding: 5px 0 5px 0;
+	color: #939393;	
+	font-size:16px;
+	border-top: 1px solid #777;
+	border-bottom: 1px solid #777;
+	margin: 0 0 15px 0;
+	line-height: 24px;
+	font-style:normal;
+}
+
+
+
 
 /* =SIDEBAR ADJUSTMENTS
 ===========================================================*/
@@ -877,7 +928,8 @@ input#s{
 }
 
 
-/* These styles are for the footer */
+/* =FOOTER ADJUSTMENTS 
+===========================================================*/
 
 #footer {
 	margin: 0 auto;
@@ -895,8 +947,9 @@ input#s{
 	margin: 0 16px 0 16px;
 	}
 	
-/*These are index styles */
-
+/* =INDEX STYLES
+===========================================================*/
+	
 #flashmovies{
 	width:1000px;
 	height:600px;
