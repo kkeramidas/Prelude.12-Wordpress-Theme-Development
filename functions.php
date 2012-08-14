@@ -90,7 +90,7 @@ function category_header_image(){
 	    elseif (is_page('discussions' )) {
 	        $headerimage = 'PRELUDEDiscussionsHeader.png';
 	    }
-	    elseif (is_page('schedule' )) {
+	    elseif (tribe_is_event()) {
 	        $headerimage = 'PRELUDEScheduleHeader.png';
 	    }
 	    elseif (is_page('directions' )) {
@@ -417,7 +417,7 @@ function events_page_side_calendar () {
 	);
 ?>
 	<div id="calendar">
-	<h3 class="widgettitle">Prelude.12 at a Glance</h3>
+	<h1 class="sidecal-heading">Prelude.12 at a Glance</h3>
 	<div class="events-sidecal-event">
 	<?php
 
@@ -460,7 +460,7 @@ function events_page_side_calendar () {
 		$datecount = 1;
 		?>
 		
-        <div class="event-short-title"><div class="<?php echo $eventcal;?>"><a href="<?php echo get_permalink($eventpost->ID); ?>" id="post-<?php echo $eventpost->ID ?>"><?php the_title(); ?></a></div></div>
+        <div class="event-title"><div class="<?php echo $eventcal;?>"><a href="<?php echo get_permalink($eventpost->ID); ?>" id="post-<?php echo $eventpost->ID ?>"><?php echo get_the_title($eventpost->ID); ?></a></div></div>
 <?php } //endforeach ?>
 
     </div>
