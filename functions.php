@@ -408,8 +408,6 @@ function childtheme_override_body_class( $print = true ) {
 // This generates the Calendar for the sidebar
 
 function events_page_side_calendar () {
-	$key="short-title";
-	
 	$get_posts = tribe_get_events(
         array(
             'eventDisplay'=>'all',

@@ -19,7 +19,7 @@ if ( !defined('ABSPATH') ) { die('-1'); }
 <?php tribe_events_before_html() ?>
 <div id="container">
 	<div id="content" class="tribe-events-event widecolumn">
-		<div id="headerimage" style="background: url('<?php echo $PRELUDEimagedir.$headerimage ?>') no-repeat">
+		<div id="headerimage" style="background: url('<?php echo $PRELUDEimagedir ?>') no-repeat">
 	    </div>
 		<?php the_post(); global $post; ?>
 		<div id="post-<?php the_ID() ?>" <?php post_class() ?>>

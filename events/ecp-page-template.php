@@ -11,11 +11,14 @@
 */
 
 // Don't load directly
+$PRELUDEimagedir = get_stylesheet_directory_uri();
+$PRELUDEimagedir .= '/library/images/PRELUDEScheduleHeader.png';
 if ( !defined('ABSPATH') ) { die('-1'); }
-
 ?>	
 <?php get_header(); ?>
 <?php tribe_events_before_html() ?>
+<div id="headerimage" style="background: url('<?php echo $PRELUDEimagedir.$headerimage ?>') no-repeat"></div>
+<?thematic_sidebar();?>
 <h2 class="tribe-events-cal-title"><?php tribe_events_title(); ?></h2>
 <?php include(tribe_get_current_template()); ?>
 <?php tribe_events_after_html() ?>

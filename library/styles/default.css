@@ -891,6 +891,13 @@ ul, li {
 	font-style:normal;
 }
 
+.tribe-events-event-entry .wp-post-image {
+max-width: 250px;
+border: none;
+padding: 0 0 10px 10px;
+margin: 0;
+}
+
 
 
 
@@ -1004,6 +1011,18 @@ h2.calendar-day{
     border-color: #458BBF;
 }
 
+body.events-list #primary {
+	float:right;
+}
+
+body.events-list #headerimage{
+	float:left;
+}
+
+body.events-list #calendar,
+body.events-archive #calendar{
+	display:none;
+}
 
 /* =FOOTER ADJUSTMENTS 
 ===========================================================*/
