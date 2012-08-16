@@ -69,7 +69,7 @@ hr {
 }
 #blog-title a:active,
 #blog-title a:hover {
-    color: #FF4B33;
+    color: #555;
 }
 #blog-description {
     color:#666;
@@ -180,12 +180,11 @@ ul.sf-menu li li li.sfHover ul {
     padding:0 0 7px 0;
 }
 .entry-title a {
-    color:#000;
     text-decoration:none;
 }
-.entry-title a:active,
+
 .entry-title a:hover {
-    color: #FF4B33;
+    color: #555;
 }
 .entry-meta {
     color:#666;
@@ -207,7 +206,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .entry-meta a:active,
 .entry-meta a:hover {
-    color: #FF4B33;
+    color: #555;
 }
 .entry-meta abbr {
     border:none;
@@ -259,7 +258,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .entry-utility a:active,
 .entry-utility a:hover {
-    color: #FF4B33;
+    color: #555;
 }
 .page .edit-link {
 	clear:both;
@@ -283,7 +282,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .page-link a:active,
 .page-link a:hover {
-    color: #FF4B33;
+    color: #555;
 }
 ul#links-page,
 ul#archives-page {
@@ -345,7 +344,7 @@ li.content-column {
 }
 .navigation a:active,
 .navigation a:hover {
-    color: #FF4B33;
+    color: #555;
 }
 .navigation .meta-nav {
     font-style:normal;
@@ -456,7 +455,7 @@ li.content-column {
 }
 #comments-list .comment-meta a:active,
 #comments-list .comment-meta a:hover {
-    color: #FF4B33;
+    color: #555;
 }
 .comment-reply-link {
     font-size:11px;
@@ -470,7 +469,7 @@ li.content-column {
 }
 .comment-reply-link a:active,
 .comment-reply-link a:hover {
-    color: #FF4B33;
+    color: #555;
 }
 .comment-navigation {
     font-weight:bold;
@@ -486,7 +485,7 @@ li.content-column {
 }
 .comment-navigation a:active,
 .comment-navigation a:hover {
-    color: #FF4B33;
+    color: #555;
 }
 .comment-navigation a,
 .comment-navigation span {
@@ -522,7 +521,7 @@ li.content-column {
     color:#666;
 }
 #respond .required {
-    color:#FF4B33;
+    color:#470F8C;
     font-weight:bold;
 }
 .form-section label {
@@ -595,7 +594,7 @@ li.content-column {
 }
 .aside .current-menu-item a,
 .aside .current_page_item a {
-    color: #FF4B33;
+    color: #470F8C;
 }
 .aside .current-menu-item .menu-item a,
 .aside .current_page_item .menu-item a {
@@ -605,7 +604,7 @@ li.content-column {
 .aside .current-menu-item .menu-item a:active,
 .aside .current_page_item .menu-item a:hover,
 .aside .current_page_item .menu-item a:active {
-    color: #FF4B33;
+    color: #555;
 }
 
 .aside caption {
@@ -869,12 +868,16 @@ ul, li {
 	font-size:14px;
 }
 
+.page-title{
+	padding-top:0px;
+}
+
 /* =EVENTS ADJUSTMENTS
 ===========================================================*/
 
 #content div.back{
 	font-size:12px;
-	margin-bottom:10px;
+	margin: 5px 0 12px;
 }
 
 #tribe-events-event-meta{
@@ -884,22 +887,145 @@ ul, li {
 	padding: 5px 0 5px 0;
 	color: #939393;	
 	font-size:16px;
-	border-top: 1px solid #777;
-	border-bottom: 1px solid #777;
+	border-width: 1px 0; 
+	border-style: solid;
+	border-color: #777;
 	margin: 0 0 15px 0;
 	line-height: 24px;
 	font-style:normal;
 }
 
-.tribe-events-event-entry .wp-post-image {
-max-width: 250px;
-border: none;
-padding: 0 0 10px 10px;
-margin: 0;
+#tribe-events-list-event-meta{
+	float:left;
+	clear:none;
+	padding: 5px 0 5px 0;
+	color: #939393;	
+	font-size:16px;
+	margin: 0 0 4px;
+	line-height: 24px;
+	font-style:normal;
 }
 
+#tribe-events-loop h2.entry-title{
+	float:left;
+	width:30%;
+	margin:0;
+	padding:0;
+	margin-bottom:10px;
+}
 
+#tribe-events-loop div.future-cinema-category,
+#tribe-events-loop div.manifestos-2012-category,
+#tribe-events-loop div.imitation-participation-category,
+#tribe-events-loop div.return-of-singspiel-category,
+#content.tribe-events-event div.future-cinema-category,
+#content.tribe-events-event div.manifestos-2012-category,
+#content.tribe-events-event div.imitation-participation-category,
+#content.tribe-events-event div.return-of-singspiel-category{
+	font-size:13px;
+	font-weight:bold;
+	text-transform:uppercase;
+    border-width: 0px;
+    border-left-width: 16px;
+    border-style: solid; 
+	padding: 2px 0 0 6px;
+	line-height:14px;
+	float:right;
+	margin-left:20px;
+}
 
+#tribe-events-loop div.future-cinema-category,
+#tribe-events-loop div.manifestos-2012-category,
+#tribe-events-loop div.imitation-participation-category,
+#tribe-events-loop div.return-of-singspiel-category{
+	margin-top:2px;
+}
+
+#content.tribe-events-event div.future-cinema-category,
+#content.tribe-events-event div.manifestos-2012-category,
+#content.tribe-events-event div.imitation-participation-category,
+#content.tribe-events-event div.return-of-singspiel-category{
+	margin-top:7px;
+}
+
+.future-cinema-category{
+	border-color: #CDD42A;
+}
+
+.manifestos-2012-category{
+	border-color: #CB5795;
+}
+
+.imitation-participation-category{
+    border-color: #DA8712;
+}
+
+.return-of-singspiel-category{
+    border-color: #458BBF;
+}
+
+#tribe-events-loop h2.calendar-day{
+	width:260px;
+	text-align:center;
+	height: 24px;
+	padding-top: 5px;
+	margin: 10px 0;
+	padding: 8px 10px;
+	font-size: 20px;
+	color: #fff;
+	background-color:black;
+	font-weight: bold
+}
+
+.events-archive .tribe-events-event-entry p, .venue-events .tribe-events-event-entry p{
+	margin-bottom:10px;
+}
+
+.tribe-events-event-entry .wp-post-image {
+	max-width: 250px;
+	border: none;
+	padding: 0 0 10px 10px;
+	margin: 0;
+}
+
+.tribe-events-calendar-buttons a {
+	background:#999;
+	border-radius:3px;
+	color:#fff !important;
+	display:block;
+	float:left;
+	font-size:11px;
+	font-weight:normal;
+	height:24px;
+	line-height:24px;
+	margin:-16px 0 24px 10px;
+	padding: 0 8px;
+	text-align:center;
+	width:auto;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border-radius:0px;
+}
+
+body.events-gridview .tribe-events-calendar-buttons a {
+	margin-top:-46px;
+}
+
+.tribe-events-calendar-buttons a.tribe-events-button-on {
+	background:#666;
+}
+.tribe-events-calendar-buttons a.tribe-events-button-off {
+	background:#d4dddf;
+	color:#444;
+}
+
+.events-archive .event-day{
+	color: #939393;
+}
+
+#tribe-events-calendar-header{
+	height:0px;
+}
 
 /* =SIDEBAR ADJUSTMENTS
 ===========================================================*/
@@ -929,7 +1055,7 @@ input#s{
 }
 
 #widget-social{
-	background-color: #DDD;
+	background-color: #D4DDdf;
 	height:48px;
 	width:180px;
 	margin-bottom:12px;
@@ -947,6 +1073,25 @@ img.joinmail{
 #widget-social img.social-twitter{
 	float:left;
 	padding-top: 10px;
+}
+
+#primary #share-this{
+	display:none;	
+}
+
+body.events-list #primary,
+body.events-archive #primary {
+	float:right;
+}
+
+body.events-list #headerimage,
+body.events-archive #headerimage{
+	float:left;
+}
+
+body.events-list #calendar,
+body.events-archive #calendar{
+	display:none;
 }
 
 /* =Side Calendar */
@@ -976,10 +1121,14 @@ h2.calendar-day{
 	color: black;
 	font-weight: bold
 }
+
+#calendar .calendar-event {
+	padding-left:5px;
+}
+
 #calendar a,
 .navlink,
 .navlink a {
-	color: #777;
 	text-decoration: none;
 	font-weight: normal;
 }
@@ -988,41 +1137,29 @@ h2.calendar-day{
 #calendar div.manifestos-2012,
 #calendar div.imitation-participation,
 #calendar div.return-of-singspiel{
-    border-width: 0px;
-    border-left-width: 12px;
-    border-style: solid; 
-	padding: 0 0 0 3px;
+	float:left;
+    width: 12px;
+    height: 12px; 
+	padding: 0;
 	line-height:12px;
 }
 
 #calendar div.future-cinema{
-    border-color: #CDD42A;
+    background-color: #CDD42A;
 }
 
 #calendar div.manifestos-2012{
-    border-color: #CB5795;
+    background-color: #CB5795;
 }
 
 #calendar div.imitation-participation{
-    border-color: #DA8712;
+    background-color: #DA8712;
 }
 
 #calendar div.return-of-singspiel{
-    border-color: #458BBF;
+    background-color: #458BBF;
 }
 
-body.events-list #primary {
-	float:right;
-}
-
-body.events-list #headerimage{
-	float:left;
-}
-
-body.events-list #calendar,
-body.events-archive #calendar{
-	display:none;
-}
 
 /* =FOOTER ADJUSTMENTS 
 ===========================================================*/

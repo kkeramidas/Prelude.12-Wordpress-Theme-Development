@@ -9,6 +9,22 @@
 // Don't load directly
 if ( !defined('ABSPATH') ) { die('-1'); }
 ?>
+<?php if (has_term('future-cinema','tribe_events_cat')){
+	?><div class="future-cinema-category"><a href="<?php echo site_url();?>/discussions#future-cinema">The Future of the Cinema is the Stage</a></div>
+	<?php
+}
+if (has_term('manifestos-2012','tribe_events_cat')){
+	?><div class="manifestos-2012-category"><a href="<?php echo site_url();?>/discussions#manifestos-2012">Manifestos 2012</a></div>
+	<?php
+}
+if (has_term('imitation-participation','tribe_events_cat')){
+	?><div class="imitation-participation-category"><a href="<?php echo site_url();?>/discussions#imitation-participation">Imitation of Participation</a></div>
+	<?php
+}
+if (has_term('return-of-singspiel','tribe_events_cat')){
+	?><div class="return-of-singspiel-category"><a href="<?php echo site_url();?>/discussions#return-of-singspiel">The Return of the Singspiel</a></div>
+	<?php
+}?>
 <div class="back"><a href="<?php echo tribe_get_events_link(); ?>"><?php _e('&laquo; Back to Schedule', 'tribe-events-calendar'); ?></a></div>				
 <div class="entry">
 <?php

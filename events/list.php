@@ -26,88 +26,56 @@ if ( !defined('ABSPATH') ) { die('-1'); }
 	<?php if (have_posts()) : ?>
 	<?php $hasPosts = true; $first = true; ?>
 	<?php while ( have_posts() ) : the_post(); ?>
+		<?php $day = date('j');
+		$showdate = false;
+		$datecount = 0;
+		$eventday = tribe_get_start_date( $post->ID, false, 'j' );
+		
+		if ($eventday != $day){
+			$day = $eventday;
+			$showday = true;
+
+		} //end if
+	
+		if ($datecount == 0 || $showday == true){
+			$dayheader = '<h2 class="calendar-day">';
+			$dayheader .= tribe_get_start_date( $post->ID, false, 'l, F j, Y' );
+			$dayheader .= '</h2>';
+			echo $dayheader;				
+		} // endif
+		
+		$showday = false;
+		$datecount = 1;
+		?>
 		<?php global $more; $more = false; ?>
 		<div id="post-<?php the_ID() ?>" <?php post_class('tribe-events-event clearfix') ?> itemscope itemtype="http://schema.org/Event">
-			<?php if ( tribe_is_new_event_day() && !tribe_is_day() ) : ?>
-				<h4 class="event-day"><?php echo tribe_get_start_date( null, false ); ?></h4>
-			<?php endif; ?>
-			<?php if ( tribe_is_day() && $first ) : $first = false; ?>
-				<h4 class="event-day"><?php echo tribe_event_format_date(strtotime(get_query_var('eventDate')), false); ?></h4>
-			<?php endif; ?>
+			<div id="tribe-events-list-event-meta" class="event-meta event-meta-time-place">
+			<?php echo tribe_get_start_date(null,true,' '); ?> -<?php echo tribe_get_end_date(null,true,' ');  ?> | <?php echo tribe_get_venue( get_the_ID() ) ?></div>
 			<?php the_title('<h2 class="entry-title" itemprop="name"><a href="' . tribe_get_event_link() . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></h2>'); ?>
+			<?php if (has_term('future-cinema','tribe_events_cat')){
+				?><div class="future-cinema-category"><a href="<?php echo site_url();?>/discussions#future-cinema">The Future of the Cinema is the Stage</a></div>
+				<?php
+			}
+			if (has_term('manifestos-2012','tribe_events_cat')){
+				?><div class="manifestos-2012-category"><a href="<?php echo site_url();?>/discussions#manifestos-2012">Manifestos 2012</a></div>
+				<?php
+			}
+			if (has_term('imitation-participation','tribe_events_cat')){
+				?><div class="imitation-participation-category"><a href="<?php echo site_url();?>/discussions#imitation-participation">Imitation of Participation</a></div>
+				<?php
+			}
+			if (has_term('return-of-singspiel','tribe_events_cat')){
+				?><div class="return-of-singspiel-category"><a href="<?php echo site_url();?>/discussions#return-of-singspiel">The Return of the Singspiel</a></div>
+				<?php
+			}?>
 			<div class="entry-content tribe-events-event-entry" itemprop="description">
 				<?php if ( function_exists('has_post_thumbnail') && has_post_thumbnail() ) {?>
 	 		        <?php the_post_thumbnail(); ?>
 	        	<?php } ?>
 				<?php if (has_excerpt ()): ?>
 					<?php the_excerpt(); ?>
-				<?php else: ?>
-					<?php the_content(); ?>
 				<?php endif; ?>
 			</div> <!-- End tribe-events-event-entry -->
-
-			<div class="tribe-events-event-list-meta" itemprop="location" itemscope itemtype="http://schema.org/Place">
-				<table cellspacing="0">
-					<?php if (tribe_is_multiday() || !tribe_get_all_day()): ?>
-					<tr>
-						<td class="tribe-events-event-meta-desc"><?php _e('Start:', 'tribe-events-calendar') ?></td>
-						<td class="tribe-events-event-meta-value" itemprop="startDate" content="<?php echo tribe_get_start_date(); ?>"><?php echo tribe_get_start_date(); ?></td>
-					</tr>
-					<tr>
-						<td class="tribe-events-event-meta-desc"><?php _e('End:', 'tribe-events-calendar') ?></td>
-						<td class="tribe-events-event-meta-value" itemprop="endDate" content="<?php echo tribe_get_end_date(); ?>"><?php echo tribe_get_end_date(); ?></td>
-					</tr>
-					<?php else: ?>
-					<tr>
-						<td class="tribe-events-event-meta-desc"><?php _e('Date:', 'tribe-events-calendar') ?></td>
-						<td class="tribe-events-event-meta-value" itemprop="startDate" content="<?php echo tribe_get_start_date(); ?>"><?php echo tribe_get_start_date(); ?></td>
-					</tr>
-					<?php endif; ?>
-
-					<?php
-						$venue = tribe_get_venue();
-						if ( !empty( $venue ) ) :
-					?>
-					<tr>
-						<td class="tribe-events-event-meta-desc"><?php _e('Venue:', 'tribe-events-calendar') ?></td>
-						<td class="tribe-events-event-meta-value" itemprop="name">
-							<? if( class_exists( 'TribeEventsPro' ) ): ?>
-								<?php tribe_get_venue_link( get_the_ID(), class_exists( 'TribeEventsPro' ) ); ?>
-							<? else: ?>
-								<?php echo tribe_get_venue( get_the_ID() ) ?>
-							<? endif; ?>
-						</td>
-					</tr>
-					<?php endif; ?>
-					<?php
-						$phone = tribe_get_phone();
-						if ( !empty( $phone ) ) :
-					?>
-					<tr>
-						<td class="tribe-events-event-meta-desc"><?php _e('Phone:', 'tribe-events-calendar') ?></td>
-						<td class="tribe-events-event-meta-value" itemprop="telephone"><?php echo $phone; ?></td>
-					</tr>
-					<?php endif; ?>
-					<?php if (tribe_address_exists( get_the_ID() ) ) : ?>
-					<tr>
-						<td class="tribe-events-event-meta-desc"><?php _e('Address:', 'tribe-events-calendar'); ?><br />
-						<?php if( get_post_meta( get_the_ID(), '_EventShowMapLink', true ) == 'true' ) : ?>
-							<a class="gmap" itemprop="maps" href="<?php echo tribe_get_map_link(); ?>" title="Click to view a Google Map" target="_blank"><?php _e('Google Map', 'tribe-events-calendar' ); ?></a>
-						<?php endif; ?></td>
-						<td class="tribe-events-event-meta-value"><?php echo tribe_get_full_address( get_the_ID() ); ?></td>
-					</tr>
-					<?php endif; ?>
-					<?php
-						$cost = tribe_get_cost();
-						if ( !empty( $cost ) ) :
-					?>
-					<tr>
-						<td class="tribe-events-event-meta-desc"><?php _e('Cost:', 'tribe-events-calendar') ?></td>
-						<td class="tribe-events-event-meta-value" itemprop="price"><?php echo $cost; ?></td>
-					 </tr>
-					<?php endif; ?>
-				</table>
-			</div>
 		</div> <!-- End post -->
 	<?php endwhile;// posts ?>
 	<?php else :?>

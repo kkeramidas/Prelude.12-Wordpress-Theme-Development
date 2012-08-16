@@ -425,19 +425,6 @@ function events_page_side_calendar () {
 
 	foreach($get_posts as $eventpost) { 
 		setup_postdata($eventpost);
-
-	   	if (has_term('future-cinema','tribe_events_cat',$eventpost)) {
-			$eventcal = 'future-cinema';
-		}
-		elseif (has_term('manifestos-2012','tribe_events_cat',$eventpost))  {
-			$eventcal = 'manifestos-2012';
-		}
-		elseif (has_term('imitation-participation','tribe_events_cat',$eventpost))  {
-			$eventcal = 'imitation-participation';
-		}
-		elseif (has_term('return-of-singspiel','tribe_events_cat',$eventpost)) {
-			$eventcal = 'return-of-singspiel';
-		}//endif
 		
 		$eventday = tribe_get_start_date( $eventpost->ID, false, 'j' );
 		
@@ -458,7 +445,27 @@ function events_page_side_calendar () {
 		$datecount = 1;
 		?>
 		
-        <div class="event-title"><div class="<?php echo $eventcal;?>"><a href="<?php echo get_permalink($eventpost->ID); ?>" id="post-<?php echo $eventpost->ID ?>"><?php echo get_the_title($eventpost->ID); ?></a></div></div>
+        <div class="event-title">
+			<?php
+			if (has_term('return-of-singspiel','tribe_events_cat',$eventpost)) {
+				?><div class="return-of-singspiel"></div>
+				<?php
+			}
+			if (has_term('imitation-participation','tribe_events_cat',$eventpost))  {
+				?><div class="imitation-participation"></div>
+				<?php
+			}
+			if (has_term('manifestos-2012','tribe_events_cat',$eventpost))  {
+				?><div class="manifestos-2012"></div>
+				<?php
+			}
+			if (has_term('future-cinema','tribe_events_cat',$eventpost)) {
+				?><div class="future-cinema"></div>
+				<?php
+			}			
+			//endif
+			?>
+			<a class="calendar-event" href="<?php echo get_permalink($eventpost->ID); ?>" id="post-<?php echo $eventpost->ID ?>"><?php echo get_the_title($eventpost->ID); ?></a></div>
 <?php } //endforeach ?>
 
     </div>

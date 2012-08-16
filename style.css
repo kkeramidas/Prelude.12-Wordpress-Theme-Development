@@ -77,7 +77,8 @@ li#menu-item-36 a{
 }
 
 li#menu-item-36 a:hover,
-li#menu-item-36.current-menu-item a{
+li#menu-item-36.current-menu-item a,
+body.events-single li#menu-item-36 a{
     display: block;
     background-image:url('library/images/ArtistsHOVER.gif');
     background-repeat: no-repeat;
@@ -115,7 +116,7 @@ li#menu-item-78 a{
 }
 
 li#menu-item-78 a:hover,
-li#menu-item-78.current-menu-item a{
+body.events-archive #menu-top-menu li.menu-item-object-custom a{
     display: block;
     background-image:url('library/images/ScheduleHOVER.gif');
     background-repeat: no-repeat;
@@ -134,7 +135,9 @@ li#menu-item-38 a{
 }
 
 li#menu-item-38 a:hover,
-li#menu-item-38.current-menu-item a{
+li#menu-item-38.current-menu-item a,
+body.single-post li#menu-item-38 a,
+body.category li#menu-item-38 a{
     display: block;
     background-image:url('library/images/BlogHOVER.gif');
     background-repeat: no-repeat;
