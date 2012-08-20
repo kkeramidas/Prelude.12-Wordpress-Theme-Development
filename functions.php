@@ -81,17 +81,20 @@ function category_header_image(){
     if (is_page('index')){
 	}
 	else {
-		if (in_category('about')) {
-	        $headerimage = 'PRELUDEAboutHeader.png';
+		if (tribe_is_event()) {
+	        $headerimage = 'PRELUDEScheduleHeader.png';
+	    }
+	    elseif (is_single() OR is_archive() OR is_home()) {
+	        $headerimage = 'PRELUDEBlogHeader.png';
 	    }
 		elseif (in_category('artists')) {
 	        $headerimage = 'PRELUDEArtistsHeader.png';
 	    }
+	    else if (in_category('about')) {
+	        $headerimage = 'PRELUDEAboutHeader.png';
+	    }
 	    elseif (is_page('discussions' )) {
 	        $headerimage = 'PRELUDEDiscussionsHeader.png';
-	    }
-	    elseif (tribe_is_event()) {
-	        $headerimage = 'PRELUDEScheduleHeader.png';
 	    }
 	    elseif (is_page('directions' )) {
 	        $headerimage = 'PRELUDEDirectionsHeader.png';

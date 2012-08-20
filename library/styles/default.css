@@ -948,24 +948,8 @@ ul, li {
 	margin-top:7px;
 }
 
-.future-cinema-category{
-	border-color: #CDD42A;
-}
-
-.manifestos-2012-category{
-	border-color: #CB5795;
-}
-
-.imitation-participation-category{
-    border-color: #DA8712;
-}
-
-.return-of-singspiel-category{
-    border-color: #458BBF;
-}
-
 #tribe-events-loop h2.calendar-day{
-	width:260px;
+	width:300px;
 	text-align:center;
 	height: 24px;
 	padding-top: 5px;
@@ -1144,20 +1128,39 @@ h2.calendar-day{
 	line-height:12px;
 }
 
+/* =CATEGORY COLORS 
+===========================================================*/
+
+.future-cinema-category{
+	border-color: #00df95;
+}
+
+.manifestos-2012-category{
+	border-color: #DF2C00;
+}
+
+.imitation-participation-category{
+    border-color: #921d00;
+}
+
+.return-of-singspiel-category{
+    border-color: #ff4719;
+}
+
 #calendar div.future-cinema{
-    background-color: #CDD42A;
+    background-color: #00df95;
 }
 
 #calendar div.manifestos-2012{
-    background-color: #CB5795;
+    background-color: #DF2C00;
 }
 
 #calendar div.imitation-participation{
-    background-color: #DA8712;
+    background-color: #921d00;
 }
 
 #calendar div.return-of-singspiel{
-    background-color: #458BBF;
+    background-color: #ff4719;
 }
 
 
