@@ -1189,6 +1189,7 @@ h2.calendar-day{
 #flashmovies{
 	width:1000px;
 	height:600px;
+	margin-bottom:20px;
 }
 
 #flashmovies .movie{
