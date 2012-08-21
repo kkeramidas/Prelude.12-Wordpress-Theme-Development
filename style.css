@@ -34,6 +34,9 @@ This work, like WordPress, is released under GNU General Public License, version
 /* Prepare theme for plugins */
 @import url('../thematic/library/styles/plugins.css');
 
+
+/*== THESE STYLES ARE DEPENDENT ON RELATIVE URL PATHS IN THE THEME AND MUST LIVE ON STYLE.CSS */
+
 #access { 
 	background-image:url('library/images/PRELUDE12Free.png');
 	background-repeat: no-repeat;
@@ -48,7 +51,7 @@ This work, like WordPress, is released under GNU General Public License, version
 }
 
 
-li#menu-item-37 a{
+li a[title=about]{
     display: block;
     background-image:url('library/images/About.gif');
     background-repeat: no-repeat;
@@ -57,8 +60,8 @@ li#menu-item-37 a{
     text-indent: -9000px;
 }
 
-li#menu-item-37 a:hover,
-li#menu-item-37.current-menu-item a{
+li a:hover[title=about],
+li.current-menu-item a[title=about]{
     display: block;
     background-image:url('library/images/AboutHOVER.gif');
     background-repeat: no-repeat;
@@ -67,7 +70,7 @@ li#menu-item-37.current-menu-item a{
     text-indent: -9000px;
 }
 
-li#menu-item-36 a{
+li a[title=artists]{
     display: block;
     background-image:url('library/images/Artists.gif');
     background-repeat: no-repeat;
@@ -76,9 +79,9 @@ li#menu-item-36 a{
     text-indent: -9000px;
 }
 
-li#menu-item-36 a:hover,
-li#menu-item-36.current-menu-item a,
-body.events-single li#menu-item-36 a{
+li a:hover[title=artists],
+li.current-menu-item a[title=artists],
+body.events-single li a[title=artists]{
     display: block;
     background-image:url('library/images/ArtistsHOVER.gif');
     background-repeat: no-repeat;
@@ -87,7 +90,7 @@ body.events-single li#menu-item-36 a{
     text-indent: -9000px;
 }
 
-li#menu-item-34 a{
+li a[title=discussions]{
     display: block;
     background-image:url('library/images/Discussions.gif');
     background-repeat: no-repeat;
@@ -96,8 +99,8 @@ li#menu-item-34 a{
     text-indent: -9000px;
 }
 
-li#menu-item-34 a:hover,
-li#menu-item-34.current-menu-item a{
+li a:hover[title=discussions],
+li.current-menu-item a[title=discussions]{
     display: block;
     background-image:url('library/images/DiscussionsHOVER.gif');
     background-repeat: no-repeat;
@@ -106,7 +109,7 @@ li#menu-item-34.current-menu-item a{
     text-indent: -9000px;
 }
 
-li#menu-item-78 a{
+li.menu-item-object-custom a{
     display: block;
     background-image:url('library/images/Schedule.gif');
     background-repeat: no-repeat;
@@ -115,7 +118,7 @@ li#menu-item-78 a{
     text-indent: -9000px;
 }
 
-li#menu-item-78 a:hover,
+li.menu-item-object-custom a:hover,
 body.events-archive #menu-top-menu li.menu-item-object-custom a{
     display: block;
     background-image:url('library/images/ScheduleHOVER.gif');
@@ -125,7 +128,7 @@ body.events-archive #menu-top-menu li.menu-item-object-custom a{
     text-indent: -9000px;
 }
 
-li#menu-item-38 a{
+li a[title=blog]{
     display: block;
     background-image:url('library/images/Blog.gif');
     background-repeat: no-repeat;
@@ -134,10 +137,10 @@ li#menu-item-38 a{
     text-indent: -9000px;
 }
 
-li#menu-item-38 a:hover,
-li#menu-item-38.current-menu-item a,
-body.single-post li#menu-item-38 a,
-body.category li#menu-item-38 a{
+li a:hover[title=blog],
+li.current-menu-item a[title=blog],
+body.single-post li a[title=blog],
+body.archive li a[title=blog]{
     display: block;
     background-image:url('library/images/BlogHOVER.gif');
     background-repeat: no-repeat;
@@ -146,7 +149,7 @@ body.category li#menu-item-38 a{
     text-indent: -9000px;
 }
 
-li#menu-item-33 a{
+li a[title=directions]{
     display: block;
     background-image:url('library/images/Directions.gif');
     background-repeat: no-repeat;
@@ -155,8 +158,8 @@ li#menu-item-33 a{
     text-indent: -9000px;
 }
 
-li#menu-item-33 a:hover,
-li#menu-item-33.current-menu-item a{
+li a:hover[title=directions],
+li.current-menu-item a[title=directions]{
     display: block;
     background-image:url('library/images/DirectionsHOVER.gif');
     background-repeat: no-repeat;
