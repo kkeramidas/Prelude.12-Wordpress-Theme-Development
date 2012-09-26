@@ -50,7 +50,7 @@
                         <param name="expressinstall" value="<?php echo $PRELUDEscriptdir?>expressInstall.swf" />
                         <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
                         <div>
-                          <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>a_2.jpg"/></a>
+                          <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>a_2.png"/></a>
                       </div>
                         <!--[if !IE]>-->
                     </object>
@@ -77,7 +77,7 @@
             	    <param name="expressinstall" value="<?php echo $PRELUDEscriptdir?>expressInstall.swf" />
             	    <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
             	    <div>
-            	      <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>b_1.jpg"/></a>
+            	      <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>b_1.png"/></a>
                     </div>   
           	      
             	    <!--[if !IE]>-->
@@ -103,7 +103,7 @@
                   <param name="expressinstall" value="<?php echo $PRELUDEscriptdir?>expressInstall.swf" />
                   <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
                   <div>
-                       <a href="themes.html"><img src="<?php echo $PRELUDEfronttempdir?>c_1.jpg"/></a>
+                       <a href="themes.html"><img src="<?php echo $PRELUDEfronttempdir?>c_1.png"/></a>
                   </div>
                   <!--[if !IE]>-->
                 </object>
@@ -128,7 +128,7 @@
                     <param name="expressinstall" value="<?php echo $PRELUDEscriptdir?>expressInstall.swf" />
                     <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
                     <div>
-                      <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>e_1.jpg"/></a>
+                      <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>e_1.png"/></a>
                     </div>
                     <!--[if !IE]>-->
                   </object>
@@ -153,7 +153,7 @@
                     <param name="expressinstall" value="<?php echo $PRELUDEscriptdir?>expressInstall.swf" />
                     <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
                     <div>
-                      <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>f_2.jpg"/></a>
+                      <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>f_2.png"/></a>
                     </div>
                     <!--[if !IE]>-->
                   </object>
@@ -180,7 +180,7 @@
                   <param name="expressinstall" value="<?php echo $PRELUDEscriptdir?>expressInstall.swf" />
                   <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
                   <div>
-                    <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>g_2.jpg"/></a>
+                    <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>g_2.png"/></a>
                   </div>
                   <!--[if !IE]>-->
                 </object>
@@ -205,7 +205,7 @@
                     <param name="expressinstall" value="<?php echo $PRELUDEscriptdir?>expressInstall.swf" />
                     <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
                     <div>
-                      <a href="themes.html"><img src="<?php echo $PRELUDEfronttempdir?>h_3.jpg"/></a>
+                      <a href="themes.html"><img src="<?php echo $PRELUDEfronttempdir?>h_3.png"/></a>
                     </div>
                     <!--[if !IE]>-->
                   </object>
@@ -230,7 +230,7 @@
                     <param name="expressinstall" value="<?php echo $PRELUDEscriptdir?>expressInstall.swf" />
                     <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
                     <div>
-                      <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>i_1.jpg"/></a>
+                      <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>i_1.png"/></a>
                     </div>
                     <!--[if !IE]>-->
                   </object>
@@ -258,7 +258,7 @@
               <param name="expressinstall" value="<?php echo $PRELUDEscriptdir?>expressInstall.swf" />
               <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
               <div>
-                <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>d_1.jpg"/></a>
+                <a href="<?php echo home_url();?>/artists/"><img src="<?php echo $PRELUDEfronttempdir?>d_1.png"/></a>
               </div>
               <!--[if !IE]>-->
             </object>
@@ -283,7 +283,7 @@
                 <param name="expressinstall" value="<?php echo $PRELUDEscriptdir?>expressInstall.swf" />
                 <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
                 <div>
-                  <a href="themes.html"><img src="<?php echo $PRELUDEfronttempdir?>j_1.jpg"/></a>
+                  <a href="themes.html"><img src="<?php echo $PRELUDEfronttempdir?>j_1.png"/></a>
                 </div>
                 <!--[if !IE]>-->
               </object>

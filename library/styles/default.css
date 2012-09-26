@@ -51,11 +51,12 @@ hr {
 
 #header {
     z-index:2;
+	margin:0 auto;
 }
 #branding {
 	width:1000px;
 	height:86px;
-    padding:15px 0 15px 0;
+    padding:0 0 15px 0;
 }
 #blog-title {
     font-family:Arial,sans-serif;
@@ -147,7 +148,7 @@ ul.sf-menu li li li.sfHover ul {
 
 #main {
     clear:both;
-    padding:30px 0 10px 0;
+    padding:30px 20px 10px 20px;
 }
 .page-title {
     font-size:20px;
@@ -241,6 +242,11 @@ ul.sf-menu li li li.sfHover ul {
 .entry-content table {
     margin-left:1px;
 }
+
+.entry-content img {
+	max-width:750px;
+}
+
 .entry-content embed {
     margin:0 0 22px 0;
 }
@@ -853,10 +859,22 @@ ul, li {
 	margin-bottom:15px;
 	float:left;
 	clear:none;
-	width: 320px;
+	width: 100%;
 	font-size:18px;
 	font-style:italic;
 	font-weight:normal;
+}
+
+div.type-tribe_events div.entry h2{
+    width:320px;
+}
+
+#content h1.manifestos-2012,
+#content h1.future-cinema,
+#content h1.return-of-singspiel,
+#content h1.imitation-participation {
+padding: 0 0 0 10px;
+margin: 15px 0 10px;
 }
 
 .entry{
@@ -866,11 +884,18 @@ ul, li {
 
 .navlink{
 	font-size:14px;
+	width:40%;
+	line-height:18px;
 }
 
 .page-title{
 	padding-top:0px;
 }
+
+#about-nav {
+    font-size:14px;
+    text-transform:uppercase;
+    }
 
 /* =EVENTS ADJUSTMENTS
 ===========================================================*/
@@ -1038,7 +1063,7 @@ input#s{
 	margin-bottom:10px;
 }
 
-#widget-social{
+#primary div.widget-social{
 	background-color: #D4DDdf;
 	height:48px;
 	width:180px;
@@ -1049,18 +1074,19 @@ img.joinmail{
 	margin-bottom:2px;
 }
 
-#widget-social img.social-facebook{
+#primary div.widget-social img.social-facebook{
 	float:left;
 	padding: 8px 10px 0 13px;
 }
 
-#widget-social img.social-twitter{
+#primary div.widget-social img.social-twitter{
 	float:left;
 	padding-top: 10px;
 }
 
 #primary #share-this{
 	display:none;	
+	clear:both;
 }
 
 body.events-list #primary,
@@ -1128,8 +1154,15 @@ h2.calendar-day{
 	line-height:12px;
 }
 
+#calendar .calendar-event  {
+	float:left;
+	width:155px;
+	padding-bottom:5px;
+}
+
 div.event-title{
 	margin-bottom:3px;
+	clear:left;
 }
 
 /* =CATEGORY COLORS 
@@ -1167,6 +1200,22 @@ div.event-title{
     background-color: #ff9b19;
 }
 
+#content h1.manifestos-2012 {
+border-left: #DF2C00 solid 24px;
+}
+
+#content h1.future-cinema {
+border-left: #00DF95 solid 24px;
+}
+
+#content h1.return-of-singspiel {
+border-left: #FF9B19 solid 24px;
+}
+
+#content h1.imitation-participation {
+border-left: #921D00 solid 24px;
+}
+
 
 /* =FOOTER ADJUSTMENTS 
 ===========================================================*/
@@ -1174,9 +1223,9 @@ div.event-title{
 #footer {
 	margin: 0 auto;
 	width: 1000px;
-	text-align: center;
+	text-align: left;
 	border-top: 1px solid #000;
-	font-size: 12px;
+	font-size: 11px;
 	color: #000;
 	letter-spacing: .1em;
 	padding: 10px 0 40px 0;
@@ -1186,7 +1235,18 @@ div.event-title{
 	border: none;
 	margin: 0 16px 0 16px;
 	}
-	
+
+/* =COMMONS TOOLD BAR REMOVES
+===========================================================*/
+
+#wpadminbar {
+	display:none
+}
+
+.sitewide-footer, td#footer .sitewide-footer {
+	display: none!important;
+}
+
 /* =INDEX STYLES
 ===========================================================*/
 	

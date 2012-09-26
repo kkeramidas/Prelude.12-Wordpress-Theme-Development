@@ -414,6 +414,7 @@ function events_page_side_calendar () {
 	$get_posts = tribe_get_events(
         array(
             'eventDisplay'=>'all',
+			'posts_per_page'=>-1
     )
 	);
 ?>
